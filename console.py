@@ -15,7 +15,7 @@ class HBNBCommand(cmd.Cmd):
 
     """
 
-    return true
+    return True
     
     def help_quit(self, arg):
     """
@@ -28,7 +28,7 @@ class HBNBCommand(cmd.Cmd):
 
     """
     print()
-    return true
+    return True
 
 if __name__ = "__main__":
     
