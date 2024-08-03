@@ -3,6 +3,7 @@
 Base Model
 """
 import uuid
+import models
 from datetime import datetime
 
 class BaseModel():
@@ -20,12 +21,14 @@ class BaseModel():
             self.id = str(uuid.uuid4())
             self.created_at = datetime.utcnow()
             self.updated_at = datetime.utcnow()
+        models.storage.new(self)
 
     def save(self):
         """
         updating timeof updated_at
         """
         self.updated_at = datetime.utcnow()
+        models.storage.save()
         return self.updated_at
    
     def to_dict(self):
