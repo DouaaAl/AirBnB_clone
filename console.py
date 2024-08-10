@@ -3,8 +3,10 @@
 Module for console
 """
 import cmd
-import re
 import shlex
+import sys
+import models
+from models.base_model import BaseModel
 
 class HBNBCommand(cmd.Cmd):
     """
