@@ -11,7 +11,7 @@ class HBNBCommand(cmd.Cmd):
     """
     HBNBCommand console class
     """
-    prompt = "(hbnb) "
+    prompt = "(hbnb)"
     valid_classes = ["BaseModel"]
 
     def emptyline(self):
@@ -155,12 +155,6 @@ class HBNBCommand(cmd.Cmd):
 
                 obj.save()
 
-    def default(self, arg):
-        """
-        Default behavior for cmd module when input is invalid
-        """
-        return True
 
-
-if __name__ = "__main__":
+if __name__ == '__main__':
     HBNBCommand().cmdloop()
