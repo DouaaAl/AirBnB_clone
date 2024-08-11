@@ -13,7 +13,7 @@ class HBNBCommand(cmd.Cmd):
     HBNBCommand console class
     """
     prompt = "(hbnb)"
-    valid_classes = ["BaseModel"]
+    valid_classes = ["BaseModel", "User"]
 
     def emptyline(self):
         """
@@ -45,7 +45,7 @@ class HBNBCommand(cmd.Cmd):
         elif (commands[0] not in self.valid_classes):
             print("** class doesn't exist **")
         else:
-            new_instance = BaseModel()
+            new_instance = eval(f"{commands[0]}()")
             new_instance.save()
             print(new_instance.id)
 
