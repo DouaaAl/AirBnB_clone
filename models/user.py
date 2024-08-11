@@ -3,7 +3,7 @@
 """
 creating user class"
 """
-from models.base_models import BaseModel
+from models.base_model import BaseModel
 
 class User(BaseModel):
     """
