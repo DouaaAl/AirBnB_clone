@@ -45,7 +45,7 @@ class HBNBCommand(cmd.Cmd):
         elif (commands[0] not in self.valid_classes):
             print("** class doesn't exist **")
         else:
-            new_instance = eval(f"{commands[0]}()")
+            new_instance = eval(commands[0])()
             new_instance.save()
             print(new_instance.id)
 
